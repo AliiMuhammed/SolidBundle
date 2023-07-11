@@ -1,0 +1,35 @@
+/* start globale rules */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    margin: 0 auto;
+    padding:0 15px ;
+}
+/* small screen */
+@media (min-width:768px) {
+    .container{
+        width: 750px;
+    }
+}
+/* medium screen */
+@media (min-width:992px) {
+    .container{
+        width: 970px;
+    }
+}
+/* large screen */
+@media  (min-width:1200px) {
+    .container{
+        width: 1170px;
+    }
+}
+
+
+
+/* end globale rules */
