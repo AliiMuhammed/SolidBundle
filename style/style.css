@@ -409,6 +409,18 @@ header nav .toggle-menu-btn:hover span {
 
 .about .about-content .right {
     margin:  auto 0;
+    position: relative;
+}
+.about .about-content .right::before{
+    content: "";
+    background-color:rgba(40, 76, 130, 3%);
+    width: 464px;
+    height: 397px;
+    border-radius:60%;
+    position:absolute;
+    top: 55%;
+    left: 50%;
+    z-index: -1;
 }
 .about .about-content .right img {
     width: 100%;
