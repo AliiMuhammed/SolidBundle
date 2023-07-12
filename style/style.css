@@ -571,13 +571,21 @@ header nav .toggle-menu-btn:hover span {
 }
 .team-cards .card img{
     width: 100%;
+    margin-bottom: 1rem;
 }
+
 .team-cards .card h3{
-    margin: 1rem 0;
+    margin-bottom: 1rem ;
+    font-size: 1.625rem;
+    transition: var(--main-transition);
+}
+.team-cards .card:hover h3 {
+    color: var(--main-hover-color);
 }
 .team-cards .card .role{
     display: block;
     color: var(--main-paragraph-color);
+    font-size: 1.1875rem;
 }
 /* end our-team section */
 
