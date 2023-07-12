@@ -22,5 +22,10 @@ navLinks.forEach(link => {
 });
 
 //----------------------------- end header --------------------------------------------
+//----------------------------- start footer --------------------------------------------
+const footerContent = document.querySelector('footer .content')
+let year =new Date()
+footerContent.innerHTML=`&copy;Copyrights ${year.getFullYear()} | SolidBundle`
+//----------------------------- end footer --------------------------------------------
 
 

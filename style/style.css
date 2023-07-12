@@ -508,3 +508,32 @@ gap: 2rem;
 }
 
 /*end about us section */
+
+/*start footer */
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 11rem;
+    padding: 10rem 5rem;
+    background-color: var(--main-font-color);
+    color: #fff;
+    font-size:1.56rem ;
+    font-weight: 300;
+    letter-spacing: 6px;
+}
+@media only screen and (max-width: 767px) {
+    footer {
+        margin-top: 5rem;
+        padding:6rem 1rem ;
+        font-size:1.1rem ;
+        letter-spacing: 3px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    footer {
+        font-size:1.5rem ;
+        letter-spacing: 3px;
+    }
+}
+/* end footer */
