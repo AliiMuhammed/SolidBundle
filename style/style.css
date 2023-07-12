@@ -59,6 +59,19 @@ a {
     text-decoration: none;
 }
 
+p {
+    color: var(--main-paragraph-color);
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+@media only screen and (max-width: 767px) {
+    p {
+        font-size: 1.2rem;
+    }
+}
+
+
 .btn {
     font-size: 1.5rem;
     text-transform: capitalize;
@@ -333,6 +346,7 @@ header nav .toggle-menu-btn:hover span {
     font-size: 3.1rem;
     font-weight: 300;
     letter-spacing: 15px;
+    color: #fff;
 }
 
 @media only screen and (max-width: 767px) {
@@ -398,7 +412,6 @@ header nav .toggle-menu-btn:hover span {
     gap: 10rem;
 }
 
-/* Small screens (up to 767px) */
 
 @media only screen and (max-width: 991px) {
     .about .about-content {
@@ -408,20 +421,30 @@ header nav .toggle-menu-btn:hover span {
 }
 
 .about .about-content .right {
-    margin:  auto 0;
+    margin: auto 0;
     position: relative;
 }
-.about .about-content .right::before{
+
+.about .about-content .right::before {
     content: "";
-    background-color:rgba(40, 76, 130, 3%);
+    background-color: rgba(40, 76, 130, 3%);
     width: 464px;
     height: 397px;
-    border-radius:60%;
-    position:absolute;
+    border-radius: 60%;
+    position: absolute;
     top: 55%;
     left: 50%;
     z-index: -1;
 }
+
+
+@media only screen and (max-width: 991px) {
+    .about .about-content .right::before {
+        display: none;
+    }
+}
+
+
 .about .about-content .right img {
     width: 100%;
 }
@@ -432,9 +455,10 @@ header nav .toggle-menu-btn:hover span {
     justify-items: start;
     gap: 3rem;
 }
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .about-content .left {
-gap: 2rem;
+        gap: 2rem;
     }
 }
 
@@ -455,8 +479,9 @@ gap: 2rem;
     font-size: 1.5rem;
     font-weight: 200;
 }
+
 @media only screen and (max-width: 767px) {
-    .about-content .left p{
+    .about-content .left p {
         font-size: 1.2rem;
     }
 }
@@ -476,9 +501,10 @@ gap: 2rem;
     color: var(--main-paragraph-color);
 
 }
+
 @media only screen and (max-width: 767px) {
-    .about-content .left .features .feature{
-        font-size: 1.2rem;
+    .about-content .left .features .feature {
+        font-size: 1.1rem;
     }
 }
 
@@ -486,6 +512,7 @@ gap: 2rem;
     color: #8CBC42;
     margin-right: 1.562rem;
 }
+
 @media only screen and (max-width: 767px) {
     .left .features .feature i {
         margin-right: 0.8rem;
@@ -505,24 +532,57 @@ gap: 2rem;
     }
 }
 
-/* Medium screens (768px - 991px) */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .container {
-        width: 90%;
-    }
-}
-
-/* Large screens (992px and up) */
-@media only screen and (min-width: 992px) {
-    .container {
-        width: 85%;
-    }
-}
-
 /*end about us section */
 
+
+/* start our-team section */
+.team .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.team .container p {
+    width: 50%;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+@media only screen and (max-width: 767px) {
+    .team .container p {
+        width: 100%;
+        margin-bottom: 3.5rem;
+    }
+}
+.team .container .team-cards{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+}
+@media only screen and (max-width: 767px) {
+    .team .container .team-cards {
+        grid-template-columns: 1fr;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .team .container .team-cards {
+        grid-template-columns: repeat(2,2fr);
+    }
+}
+.team-cards .card img{
+    width: 100%;
+}
+.team-cards .card h3{
+    margin: 1rem 0;
+}
+.team-cards .card .role{
+    display: block;
+    color: var(--main-paragraph-color);
+}
+/* end our-team section */
+
 /*start footer */
-footer{
+footer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -530,22 +590,25 @@ footer{
     padding: 10rem 5rem;
     background-color: var(--main-font-color);
     color: #fff;
-    font-size:1.56rem ;
+    font-size: 1.56rem;
     font-weight: 300;
     letter-spacing: 6px;
 }
+
 @media only screen and (max-width: 767px) {
     footer {
         margin-top: 5rem;
-        padding:6rem 1rem ;
-        font-size:1.1rem ;
+        padding: 6rem 1rem;
+        font-size: 1.1rem;
         letter-spacing: 3px;
     }
 }
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     footer {
-        font-size:1.5rem ;
+        font-size: 1.5rem;
         letter-spacing: 3px;
     }
 }
+
 /* end footer */
