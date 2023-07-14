@@ -16,6 +16,7 @@ html {
     --main-paragraph-color: #848484;
     --main-hover-color: #0647A8;
     --btns-hover--color: #D2D2D2;
+    --section-background:#F7F7F7;
     --main-transition: all 0.3s ease-in-out;
     --main-btn-radius: 4.5rem;
 }
@@ -113,24 +114,11 @@ p {
 /* Small screens (up to 767px) */
 @media only screen and (max-width: 767px) {
     .main-heading {
-        font-size: 1.5rem;
+        font-size: 2rem;
         margin-bottom: 3rem;
     }
 }
 
-/* Medium screens (768px - 991px) */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .container {
-        width: 90%;
-    }
-}
-
-/* Large screens (992px and up) */
-@media only screen and (min-width: 992px) {
-    .container {
-        width: 85%;
-    }
-}
 
 section {
     margin-top: 11rem;
@@ -143,19 +131,13 @@ section {
     }
 }
 
-/* Medium screens (768px - 991px) */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .container {
-        width: 90%;
-    }
-}
 
 
 #scroll-to-top {
     background-color: var(--main-hover-color);
     border: none;
     padding: 5px;
-    border-radius: 50%;
+    border-radius: var(--main-btn-radius);
     width: 50px;
     height: 50px;
     font-size: 1.25rem;
@@ -653,6 +635,111 @@ header nav .toggle-menu-btn:hover span {
 }
 
 /* end our-team section */
+/* start our-services section */
+.service {
+    padding: 5rem 0;
+background-color: var(--section-background);
+}
+.service .container{
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    flex-direction: column;
+}
+.service .container .services-cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:2rem 8%;
+    margin-top: 2rem;
+}
+/* Small screens (up to 767px) */
+@media only screen and (max-width: 767px) {
+    .service .container .services-cards{
+        text-align: center;
+        grid-template-columns: 1fr;
+        gap:3rem 8%;
+    }
+    .service .container .services-cards .card{
+        width: 85%;
+        margin: 0 auto;
+    }
+}
+/* Medium screens (768px - 991px) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .service .container .services-cards{
+        text-align: center;
+        grid-template-columns: repeat(2,1fr);
+        gap:3rem 8%;
+    }
+}
+.services-cards .card .icon{
+    margin-bottom: 1rem;
+}
+.services-cards .card h4{
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+.services-cards .card p{
+    margin-bottom: 1.5rem;
+}
+.services-cards .card .learn-more{
+    color: var(--main-hover-color);
+    font-weight: 500;
+}
+/* end our-services section */
+
+/* start find us section */
+.find{
+
+}
+
+.find .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.find .container .social-accounts{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5rem 5%;
+}
+/* Small screens (up to 767px) */
+@media only screen and (max-width: 767px) {
+    .find .container .social-accounts{
+        text-align: center;
+        grid-template-columns: repeat(2,1fr);
+        gap:3rem 0;
+    }
+    .find .container .social-accounts .account{
+        width: fit-content;
+        margin:  0 auto ;
+    }
+    .social-accounts  .account a img{
+        width: 80%;
+    }
+}
+
+/* Medium screens (768px - 991px) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .find .container .social-accounts{
+        text-align: center;
+        grid-template-columns: repeat(2,1fr);
+        gap:3rem 0;
+    }
+}
+
+.container .social-accounts .account{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* end find us section */
 
 /*start footer */
 footer {
