@@ -43,6 +43,40 @@ toggleBtn.addEventListener('click', function() {
 
 //----------------------------- end header --------------------------------------------
 
+
+//----------------------------- start portfolio --------------------------------------------
+
+let list = document.querySelectorAll(".list")
+let imgBox=document.querySelectorAll(".product-img")
+
+for(let i=0;i<list.length;i++){
+  list[i].addEventListener("click",()=>{
+    for (let j = 0; j < list.length; j++) {
+     list[j].classList.remove("active")
+    }
+    list[i].classList.add("active")
+
+    let dataFilter=list[i].getAttribute("data-filter")
+
+    for (let k = 0; k < imgBox.length; k++) {
+      imgBox[k].classList.remove("active")
+      imgBox[k].classList.add("hide")
+      
+      if(imgBox[k].getAttribute("data-tags")=== dataFilter || dataFilter === "all"){
+        imgBox[k].classList.add("active")
+        imgBox[k].classList.remove("hide")
+      }
+    }
+
+
+  })
+}
+
+//----------------------------- end portfolio --------------------------------------------
+
+
+
+
 //----------------------------- start contact form --------------------------------------------
 function validateForm() {
   let firstName = document.getElementById("firstName").value;

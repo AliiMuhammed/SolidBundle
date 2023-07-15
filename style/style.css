@@ -913,6 +913,92 @@ header nav .toggle-menu-btn:hover span {
 
 /* end contact us section */
 
+/* start portfolio section */
+.portfolio{
+
+}
+.portfolio .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.portfolio .container .buttons{
+    margin-bottom: 2rem;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.portfolio .container .buttons ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.portfolio .container .buttons ul li:not(:last-child){
+    margin-right: 1rem;
+}
+@media only screen and (max-width: 767px) {
+    .portfolio .container .buttons ul li:not(:last-child) {
+        margin-right: 0.5rem;
+    }
+}
+.portfolio .container .buttons ul li.btn{
+    cursor:pointer;
+    background-color: var(--btns-hover--color);
+    color: var(--main-font-color);
+}
+.portfolio .container .buttons ul li.btn:hover{
+    background-color: var(--main-hover-color);
+    color: #fff;
+}
+.portfolio .container .buttons ul li.btn.active{
+
+    background-color: var(--main-hover-color);
+    color: #fff;
+}
+
+.portfolio .container .gallery{
+    width: 100%;
+}
+.portfolio .container .gallery .box{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 991px) {
+    .portfolio .container .gallery .box{
+        grid-template-columns: 1fr;
+        width: 80%;
+    }
+}
+
+.portfolio .container .gallery .box .product-img{
+    overflow: hidden;
+    height: fit-content;
+    margin-bottom:1rem ;
+}
+
+.portfolio .container .gallery .box .product-img.hide{
+    display: none;
+}
+.portfolio .container .gallery .box img{
+    width: 100%;
+    
+    transition: var(--main-transition);
+    filter: saturate(1);
+    transform: scale(1);
+
+}
+.portfolio .container .gallery .box img:hover{
+    filter: saturate(0);
+    transform: scale(1.2);
+}
+/* end portfolio section */
+
 
 
 /*start footer */
