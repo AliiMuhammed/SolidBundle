@@ -455,13 +455,11 @@ header nav .toggle-menu-btn:hover span {
     z-index: -1;
 }
 
-
 @media only screen and (max-width: 991px) {
     .about .about-content .right::before {
         display: none;
     }
 }
-
 
 .about .about-content .right img {
     width: 100%;
@@ -608,8 +606,6 @@ header nav .toggle-menu-btn:hover span {
     margin-bottom: 1rem;
 }
 
-
-
 @media only screen and (max-width: 991px) {
     .team-cards .card {
         display: flex;
@@ -749,8 +745,6 @@ header nav .toggle-menu-btn:hover span {
     align-items: center;
     justify-content: center;
 }
-
-
 
 /* end find us section */
 
@@ -909,8 +903,6 @@ header nav .toggle-menu-btn:hover span {
     cursor: pointer;
 }
 
-
-
 /* end contact us section */
 
 /* start portfolio section */
@@ -998,8 +990,6 @@ header nav .toggle-menu-btn:hover span {
     transform: scale(1.2);
 }
 /* end portfolio section */
-
-
 
 /*start footer */
 footer {

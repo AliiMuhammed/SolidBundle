@@ -9,13 +9,14 @@ var links = document.querySelectorAll('.links a');
 
 
 toggleBtn.addEventListener('click', function() {
-
+    this.classList.toggle("active")
     menu.classList.toggle('active-menu');
 });
 
 links.forEach(function(link) {
     link.addEventListener('click', function() {
         menu.classList.remove('active-menu');
+        toggleBtn.classList.remove("active")
     });
 });
 
@@ -103,23 +104,27 @@ function validateForm() {
     alert("Please fill in all fields.");
     return false;
   }
-  // Email format validation
   let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailPattern.test(email)) {
     alert("Please enter a valid email address.");
     return false;
   }
-  // You can add additional validation rules here, such as email format validation.
 
   return true;
 }
 //----------------------------- end contact form --------------------------------------------
 
+
+
 //----------------------------- start footer --------------------------------------------
+
 const footerContent = document.querySelector("footer .content");
 let year = new Date();
 footerContent.innerHTML = `&copy;Copyrights ${year.getFullYear()} | SolidBundle`;
+
 //----------------------------- end footer --------------------------------------------
+
+
 
 //----------------------------- scroll-to-top btn --------------------------------------------
 
