@@ -121,13 +121,15 @@ p {
 
 
 section {
-    margin-top: 11rem;
+    margin-top: 6rem;
+    padding-top:5rem ;
 }
 
 /* Small screens (up to 767px) */
 @media only screen and (max-width: 767px) {
     section {
         margin-top: 5rem;
+        padding-top:2.5rem ;
     }
 }
 
@@ -311,6 +313,7 @@ header nav .toggle-menu-btn:hover span {
     text-transform: uppercase;
     position: relative;
     margin-top: 121px;
+    padding: 0;
 }
 
 @media only screen and (max-width: 767px) {
