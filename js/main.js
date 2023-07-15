@@ -2,15 +2,23 @@
 
 // open toggle menu when click on toggle btn
 
-// Get references to the menu and toggle button elements
+
 var menu = document.querySelector('.links');
 var toggleBtn = document.querySelector('.toggle-menu-btn');
+var links = document.querySelectorAll('.links a');
 
-// Add a click event listener to the toggle button
+
 toggleBtn.addEventListener('click', function() {
-    // Toggle the 'active-menu' class on the menu element
+
     menu.classList.toggle('active-menu');
 });
+
+links.forEach(function(link) {
+    link.addEventListener('click', function() {
+        menu.classList.remove('active-menu');
+    });
+});
+
 
 //active link color when you are in section while scrolling
 
