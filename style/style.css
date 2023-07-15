@@ -1032,7 +1032,6 @@ footer {
 
 @media only screen and (max-width: 767px) {
     footer {
-        margin-top: 4rem;
         padding: 5rem 1rem;
         font-size: 0.9rem;
         letter-spacing: 3px;
