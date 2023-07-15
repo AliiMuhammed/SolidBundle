@@ -1,23 +1,45 @@
 //----------------------------- start header --------------------------------------------
 
-const navLinks = document.querySelectorAll(".nav-link");
-const toggleBtn = document.querySelector(".toggle-menu-btn");
-const links = document.querySelector(".links");
 // open toggle menu when click on toggle btn
-toggleBtn.addEventListener("click", function () {
-  this.classList.toggle("active");
-  links.classList.toggle("active-menu");
+
+// Get references to the menu and toggle button elements
+var menu = document.querySelector('.links');
+var toggleBtn = document.querySelector('.toggle-menu-btn');
+
+// Add a click event listener to the toggle button
+toggleBtn.addEventListener('click', function() {
+    // Toggle the 'active-menu' class on the menu element
+    menu.classList.toggle('active-menu');
 });
 
-// active link color when click on it
-navLinks.forEach((link) => {
-  link.addEventListener("click", function () {
-    navLinks.forEach((link) => link.classList.remove("active"));
-    this.classList.toggle("active");
-    links.classList.remove("active-menu");
-    toggleBtn.classList.remove("active");
-  });
-});
+//active link color when you are in section while scrolling
+
+    
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section');
+    
+    function updateActiveLink() {
+      const windowHeight = window.innerHeight;
+      
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const sectionHeight = section.offsetHeight;
+        
+        if (sectionTop <= windowHeight / 2 && sectionTop + sectionHeight >= windowHeight / 2) {
+          const sectionId = section.getAttribute('id');
+          
+          navLinks.forEach(link => {
+            if (link.getAttribute('href') === `#${sectionId}`) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+        }
+      });
+    }
+    
+    document.addEventListener('scroll', updateActiveLink);
 
 //----------------------------- end header --------------------------------------------
 
