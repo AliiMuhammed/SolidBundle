@@ -71,32 +71,105 @@ links.forEach(function(link) {
 
 
 //----------------------------- start portfolio --------------------------------------------
-
-let list = document.querySelectorAll(".list")
-let imgBox=document.querySelectorAll(".product-img")
-
-for(let i=0;i<list.length;i++){
-  list[i].addEventListener("click",()=>{
-    for (let j = 0; j < list.length; j++) {
-     list[j].classList.remove("active")
-    }
-    list[i].classList.add("active")
-
-    let dataFilter=list[i].getAttribute("data-filter")
-
-    for (let k = 0; k < imgBox.length; k++) {
-      imgBox[k].classList.remove("active")
-      imgBox[k].classList.add("hide")
-      
-      if(imgBox[k].getAttribute("data-tags")=== dataFilter || dataFilter === "all"){
-        imgBox[k].classList.add("active")
-        imgBox[k].classList.remove("hide")
+function fetchImage() {
+  fetch("http://solidbundle-env.eba-u2iepvsu.us-east-2.elasticbeanstalk.com/api/v1/portfolio")
+    .then(response => {
+      if (!response.ok) {
+        throw Error("Error cannot load images");
       }
-    }
+      return response.json();
+    })
+    .then(data => {
+      let arrayAll = data.data.all;
+      let arrayWeb = data.data.web;
+      let arrayMobile = data.data.mobile;
+      let arrayDesign = data.data.design;
 
+      const galleryContainer = document.querySelector(".gallery .box");
+      let totalDisplayedImages = 8;
+      const loadMoreCount = 4;
 
-  })
+      function createImageElement(item, category) {
+        return `
+          <div class="product-img" data-tags="${category}">
+            <img src="${item.image}" alt="${item.title}">
+          </div>
+        `;
+      }
+
+      function displayImages(images, category) {
+        const displayedImages = images.slice(0, totalDisplayedImages);
+        galleryContainer.innerHTML = displayedImages.map(item => createImageElement(item, category)).join("");
+        const imgElements = galleryContainer.querySelectorAll(".product-img");
+        imgElements.forEach((img, index) => {
+          setTimeout(() => {
+            img.classList.add("active");
+          }, index * 100);
+        });
+      }
+
+      displayImages(arrayAll, "all");
+
+      let list = document.querySelectorAll(".list");
+      const showMoreButton = document.querySelector(".show-more");
+
+      for (let i = 0; i < list.length; i++) {
+        list[i].addEventListener("click", () => {
+          for (let j = 0; j < list.length; j++) {
+            list[j].classList.remove("active");
+          }
+          list[i].classList.add("active");
+
+          let dataFilter = list[i].getAttribute("data-filter");
+
+          if (dataFilter === "all") {
+            totalDisplayedImages = 8;
+            displayImages(arrayAll, "all");
+            showMoreButton.disabled = totalDisplayedImages >= arrayAll.length;
+          } else if (dataFilter === "web") {
+            totalDisplayedImages = 8;
+            displayImages(arrayWeb, "web");
+            showMoreButton.disabled = totalDisplayedImages >= arrayWeb.length;
+          } else if (dataFilter === "mobile") {
+            totalDisplayedImages = 8;
+            displayImages(arrayMobile, "mobile");
+            showMoreButton.disabled = totalDisplayedImages >= arrayMobile.length;
+          } else if (dataFilter === "design") {
+            totalDisplayedImages = 8;
+            displayImages(arrayDesign, "design");
+            showMoreButton.disabled = totalDisplayedImages >= arrayDesign.length;
+          }
+        });
+      }
+
+      // "Show More" button functionality
+      showMoreButton.addEventListener("click", () => {
+        totalDisplayedImages += loadMoreCount;
+        let dataFilter = document.querySelector(".list.active").getAttribute("data-filter");
+        if (dataFilter === "all") {
+          displayImages(arrayAll, "all");
+          showMoreButton.disabled = totalDisplayedImages >= arrayAll.length;
+        } else if (dataFilter === "web") {
+          displayImages(arrayWeb, "web");
+          showMoreButton.disabled = totalDisplayedImages >= arrayWeb.length;
+        } else if (dataFilter === "mobile") {
+          displayImages(arrayMobile, "mobile");
+          showMoreButton.disabled = totalDisplayedImages >= arrayMobile.length;
+        } else if (dataFilter === "design") {
+          displayImages(arrayDesign, "design");
+          showMoreButton.disabled = totalDisplayedImages >= arrayDesign.length;
+        }
+      });
+    })
+    .catch(error => {
+      errorMessage = error;
+    });
 }
+
+fetchImage();
+
+
+
 
 //----------------------------- end portfolio --------------------------------------------
 
@@ -161,8 +234,6 @@ btn.onclick = () => {
     behavior: "smooth",
   });
 };
-
-
 
 
 

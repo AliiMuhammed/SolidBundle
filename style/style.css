@@ -81,6 +81,7 @@ p {
     color: #fff;
     padding: 1rem 1.5rem;
     transition: var(--main-transition);
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -707,92 +708,102 @@ header nav .toggle-menu-btn:hover span {
     justify-content: center;
     flex-direction: column;
     text-align: center;
-}
-
-.portfolio .container .buttons {
+  }
+  
+  .portfolio .container .buttons {
     margin-bottom: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.portfolio .container .buttons ul {
+  }
+  
+  .portfolio .container .buttons ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.portfolio .container .buttons ul li:not(:last-child) {
+  }
+  
+  .portfolio .container .buttons ul li:not(:last-child) {
     margin-right: 1rem;
-}
-
-@media only screen and (max-width: 767px) {
+  }
+  
+  @media only screen and (max-width: 767px) {
     .portfolio .container .buttons ul li:not(:last-child) {
-        margin-right: 0.5rem;
+      margin-right: 0.5rem;
     }
-}
-
-.portfolio .container .buttons ul li.btn {
+  }
+  
+  .portfolio .container .buttons ul li.btn {
     cursor: pointer;
     background-color: var(--btns-hover--color);
     color: var(--main-font-color);
-}
-
-.portfolio .container .buttons ul li.btn:hover {
+  }
+  
+  .portfolio .container .buttons ul li.btn:hover {
     background-color: var(--main-hover-color);
     color: #fff;
-}
-
-.portfolio .container .buttons ul li.btn.active {
-
+  }
+  
+  .portfolio .container .buttons ul li.btn.active {
     background-color: var(--main-hover-color);
     color: #fff;
-}
-
-.portfolio .container .gallery {
+  }
+  
+  .portfolio .container .gallery {
     width: 100%;
-}
-
-.portfolio .container .gallery .box {
+  }
+  
+  .portfolio .container .gallery .box {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     width: 80%;
     margin: 0 auto;
-}
-
-@media only screen and (max-width: 991px) {
+  }
+  
+  @media only screen and (max-width: 991px) {
     .portfolio .container .gallery .box {
-        grid-template-columns: 1fr;
-        width: 80%;
+      grid-template-columns: 1fr;
+      width: 80%;
     }
-}
-
-.portfolio .container .gallery .box .product-img {
+  }
+  
+  .portfolio .container .gallery .box .product-img {
     overflow: hidden;
-    height: fit-content;
-    margin-bottom: 1rem;
-}
-
-.portfolio .container .gallery .box .product-img.hide {
-    display: none;
-}
-
-.portfolio .container .gallery .box img {
+    opacity: 0; /* Start with opacity 0 to create fade-in effect */
+    transition: opacity 0.5s ease-in-out; /* Add a smooth transition effect */
+  }
+  
+  .portfolio .container .gallery .box .product-img.active {
+    opacity: 1; /* Set opacity to 1 for displayed images */
+  }
+  
+  .portfolio .container .gallery .box img {
     width: 100%;
-
+    height: 100%;
     transition: var(--main-transition);
     filter: saturate(1);
     transform: scale(1);
-
-}
-
-.portfolio .container .gallery .box img:hover {
+  }
+  
+  .portfolio .container .gallery .box img:hover {
     filter: saturate(0);
     transform: scale(1.2);
-}
+  }
 
-/* end portfolio section */
+  .portfolio .show-more-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+  .portfolio .show-more-btn button{
+    outline: none;
+    border: none;
+}
+  
+  /* end portfolio section */
+  
 
 /* start find us section */
 
