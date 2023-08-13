@@ -72,7 +72,7 @@ links.forEach(function(link) {
 
 //----------------------------- start portfolio --------------------------------------------
 function fetchImage() {
-  fetch("http://solidbundle-env.eba-u2iepvsu.us-east-2.elasticbeanstalk.com/api/v1/portfolio")
+  fetch("https://solidbundle.e-emoney.com/api/v1/project")
     .then(response => {
       if (!response.ok) {
         throw Error("Error cannot load images");
