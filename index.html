@@ -258,7 +258,6 @@
             </div>
         </section>
 
-
         <div id="imageModal" class="modal">
             <span class="close">&times;</span>
             <div class="modal-content">
@@ -312,11 +311,12 @@
                                 src="./images/find us/2.png" alt="acc img" /></a>
                     </div>
                     <div class="account">
-                        <a href="#"  target="_blank" class="acc-link"><img
+                        <a href="#" target="_blank" class="acc-link"><img
                                 src="./images/find us/3.png" alt="acc img" /></a>
                     </div>
                     <div class="account">
-                        <a href="https://www.instagram.com/solidbundle/" target="_blank" class="acc-link"><img
+                        <a href="https://www.instagram.com/solidbundle/"
+                            target="_blank" class="acc-link"><img
                                 src="./images/find us/4.png" alt="acc img" /></a>
                     </div>
                     <div class="account">
@@ -343,43 +343,52 @@
                     </div>
                     <div class="contact-card">
                         <img src="./images/contact/2.png" alt />
-                        <p>+20 100 423 2143</p>
+                        <p>+20 100 423 2143</p>
                     </div>
                     <div class="contact-card">
                         <img src="./images/contact/3.png" alt />
-                        <a href="https://wa.me/+201004232143?" target="_blank"><p>+20 100 423 2143</p></a>
+                        <a href="https://wa.me/+201004232143?" target="_blank"><p>+20
+                                100 423 2143</p></a>
                     </div>
                 </div>
                 <div class="contact-form">
+                    <div class="success-msg">
+                    </div>
                     <h3>Contact Form</h3>
-                    <form onsubmit="return validateForm()">
+                    <form>
                         <div class="input-field">
                             <label for="firstName">First Name</label>
-                            <input type="text" id="firstName"
-                                name="firstName" />
+                            <input type="text" id="firstName" name="firstName" />
+                            <p class="error-text firstName"></p>
                         </div>
                         <div class="input-field">
                             <label for="lastName">Last Name</label>
                             <input type="text" id="lastName" name="lastName" />
+                            <p class="error-text lastName"></p>
                         </div>
                         <div class="input-field">
                             <label for="email">Email</label>
                             <input type="email" id="email" name="email" />
+                            <p class="error-text email"></p>
                         </div>
                         <div class="input-field">
                             <label for="subject">Subject</label>
                             <input type="text" id="subject" name="subject" />
+                            <p class="error-text subject"></p>
                         </div>
                         <div class="input-field">
                             <label for="message">Message</label>
-                            <textarea id="message"
+                            <textarea
+                                id="message"
                                 placeholder="Write your notes or questions here..."
                                 name="message"></textarea>
+                            <p class="error-text message"></p>
                         </div>
                         <input type="submit" class="btn form-btn"
-                            value="Submit" />
+                            id="submit-btn" value="Submit" />
                     </form>
                 </div>
+
             </div>
         </section>
         <!-- end contact us section -->
@@ -396,6 +405,7 @@
         </button>
 
         <!-- javaScript link -->
+        <script src="js/formValidation.js"></script>
         <script src="js/portfolio.js"></script>
         <script src="js/main.js"></script>
     </body>

@@ -70,33 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //----------------------------- end header --------------------------------------------
 
 
-//----------------------------- start contact form --------------------------------------------
-function validateForm() {
-  let firstName = document.getElementById("firstName").value;
-  let lastName = document.getElementById("lastName").value;
-  let email = document.getElementById("email").value;
-  let subject = document.getElementById("subject").value;
-  let message = document.getElementById("message").value;
 
-  if (
-    firstName === "" ||
-    lastName === "" ||
-    email === "" ||
-    subject === "" ||
-    message === ""
-  ) {
-    alert("Please fill in all fields.");
-    return false;
-  }
-  let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailPattern.test(email)) {
-    alert("Please enter a valid email address.");
-    return false;
-  }
-
-  return true;
-}
-//----------------------------- end contact form --------------------------------------------
 
 //----------------------------- start footer --------------------------------------------
 
