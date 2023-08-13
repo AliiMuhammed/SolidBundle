@@ -16,6 +16,12 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500&display=swap"
             rel="stylesheet" />
+        <!-- slider -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+        <link rel="stylesheet" href="style/slider.css">
         <title>SOLIDBUNDLE</title>
         <!-- tab icon -->
         <link rel="icon" href="images/tab-icon.png" />
@@ -251,6 +257,45 @@
                 <button class="btn show-more"> show more</button>
             </div>
         </section>
+
+
+        <div id="imageModal" class="modal">
+            <span class="close">&times;</span>
+            <div class="modal-content">
+                <div class="popup-content">
+                    <div class="left">
+                        <div class="wrapper">
+                            <i id="left" class="fa-solid fa-angle-left"></i>
+                            <div class="carousel">
+                                <!-- Images will be added dynamically here -->
+                            </div>
+                            <i id="right" class="fa-solid fa-angle-right"></i>
+                        </div>
+                        <div class="dots">
+                            <!-- Dots will be added dynamically here -->
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="title">
+                            <h1>Title</h1>
+                            <p class="title-project"></p>
+                        </div>
+                        <div class="description">
+                            <h1>Description</h1>
+                            <p class="description-project"></p>
+                        </div>
+                        <div class="btns">
+                            <a href="#" class="google-play"><img
+                                    src="./images/popup/google btn.png"
+                                    alt="google play"></a>
+                            <a href="#" class="app-play"><img
+                                    src="./images/popup/app store btn.png"
+                                    alt="app store"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- end portfolio section -->
 
         <!-- start find us section -->
@@ -259,27 +304,27 @@
                 <h1 class="main-heading">find us</h1>
                 <div class="social-accounts">
                     <div class="account">
-                        <a href="#" class="acc-link"><img
+                        <a href="#" target="_blank" class="acc-link"><img
                                 src="./images/find us/1.png" alt="acc img" /></a>
                     </div>
                     <div class="account">
-                        <a href="#" class="acc-link"><img
+                        <a href="#" target="_blank" class="acc-link"><img
                                 src="./images/find us/2.png" alt="acc img" /></a>
                     </div>
                     <div class="account">
-                        <a href="#" class="acc-link"><img
+                        <a href="#"  target="_blank" class="acc-link"><img
                                 src="./images/find us/3.png" alt="acc img" /></a>
                     </div>
                     <div class="account">
-                        <a href="#" class="acc-link"><img
+                        <a href="https://www.instagram.com/solidbundle/" target="_blank" class="acc-link"><img
                                 src="./images/find us/4.png" alt="acc img" /></a>
                     </div>
                     <div class="account">
-                        <a href="#" class="acc-link"><img
+                        <a href="#" target="_blank" class="acc-link"><img
                                 src="./images/find us/5.png" alt="acc img" /></a>
                     </div>
                     <div class="account">
-                        <a href="#" class="acc-link"><img
+                        <a href="#" target="_blank" class="acc-link"><img
                                 src="./images/find us/6.png" alt="acc img" /></a>
                     </div>
                 </div>
@@ -294,15 +339,15 @@
                 <div class="contact-info">
                     <div class="contact-card">
                         <img src="./images/contact/1.png" alt />
-                        <p><a href="mailto:myemail@gmail.com">myemail@gmail.com</a></p>
+                        <p><a href="mailto:contact@solidbundle.com">contact@solidbundle.com</a></p>
                     </div>
                     <div class="contact-card">
                         <img src="./images/contact/2.png" alt />
-                        <p>+201559660380</p>
+                        <p>+20 100 423 2143</p>
                     </div>
                     <div class="contact-card">
                         <img src="./images/contact/3.png" alt />
-                        <p>+201559660380</p>
+                        <a href="https://wa.me/+201004232143?" target="_blank"><p>+20 100 423 2143</p></a>
                     </div>
                 </div>
                 <div class="contact-form">
@@ -351,6 +396,7 @@
         </button>
 
         <!-- javaScript link -->
+        <script src="js/portfolio.js"></script>
         <script src="js/main.js"></script>
     </body>
 
