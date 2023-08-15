@@ -1095,6 +1095,8 @@ footer {
 
 /* end footer */
 
+
+/*start popup */
 .modal {
     display: none;
     position: fixed;
