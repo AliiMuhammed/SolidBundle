@@ -177,9 +177,14 @@ section {
     position: fixed;
     bottom: 40px;
     right: 40px;
-    z-index: 1000000000000000000000000000000000000;
+    z-index:1000000000000;
 }
-
+@media only screen and (max-width: 767px) {
+    #scroll-to-top {
+        z-index:1000000000000;
+    }
+    
+}
 #scroll-to-top:hover {
     background-color: var(--btns-hover--color);
     color: var(--main-font-color);
