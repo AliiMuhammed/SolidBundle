@@ -21,6 +21,30 @@ html {
     --main-btn-radius: 4.5rem;
 }
 
+::-webkit-scrollbar {
+    width: 1.3rem;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background: var(--btns-hover--color);
+    transition: all 0.5s ease-in-out;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--main-hover-color);
+}
+
+::-webkit-scrollbar-track {
+    background: #f9f9f9;
+}
+
+
+
 body {
     font-family: 'Roboto', sans-serif;
     color: var(--main-font-color);
@@ -153,6 +177,7 @@ section {
     position: fixed;
     bottom: 40px;
     right: 40px;
+    z-index: 1000000000000000000000000000000000000;
 }
 
 #scroll-to-top:hover {
@@ -1034,15 +1059,15 @@ textarea:focus {
     cursor: pointer;
 }
 
-.error-text{
+.error-text {
     color: rgb(226, 0, 0);
     padding: 0.5rem 1rem;
     font-size: 1rem;
-    
+
 }
 
-.success-msg{
-    
+.success-msg {
+
     width: 80%;
     margin: 0 auto;
     justify-content: center;
@@ -1055,14 +1080,16 @@ textarea:focus {
     display: none;
     text-align: center;
 }
+
 @media only screen and (max-width: 767px) {
 
-    .success-msg{
-    
+    .success-msg {
+
         width: 100%;
 
     }
 }
+
 /* end contact us section */
 
 /*start footer */
@@ -1120,15 +1147,15 @@ footer {
     justify-content: center;
     border-radius: 1.5rem;
     background-color: #fff;
-   
-  }
-  .modal-content .popup-content{
+}
+
+.modal-content .popup-content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 6rem;
     width: 100%;
-   
-  }
+
+}
 
 .modal-content .right {
     display: flex;
@@ -1141,15 +1168,19 @@ footer {
     color: var(--main-hover-color);
     font-size: 1.5rem;
 }
-.modal-content .right .title{
+
+.modal-content .right .title {
     margin-bottom: 3rem;
 }
-.modal-content .right .description{
+
+.modal-content .right .description {
     margin-bottom: 3rem;
 }
-.modal-content .right .btns{
+
+.modal-content .right .btns {
     margin-top: 3rem;
 }
+
 .modal-content .right p {
     color: var(--main-font-color);
     font-weight: 500;
@@ -1188,6 +1219,21 @@ footer {
     font-size: 30px;
     cursor: pointer;
     color: #ffffff;
+}
+
+@media only screen and (max-width: 767px) {
+    .modal-content {
+        width: 90%;
+    }
+
+    .modal-content .popup-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+        width: 100%;
+       
+
+    }
 }
 
 /*end popup*/

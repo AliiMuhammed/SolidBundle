@@ -20,7 +20,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-
+        <link rel="stylesheet" href="style/feedback.css">
+        <link rel="stylesheet"
+            href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
         <link rel="stylesheet" href="style/slider.css">
         <title>SOLIDBUNDLE</title>
         <!-- tab icon -->
@@ -166,6 +168,67 @@
         </section>
         <!-- end our team section -->
 
+        <!-- start portfolio section -->
+        <section class="portfolio" id="Portfolio">
+            <div class="container">
+                <h1 class="main-heading">Portfolio</h1>
+                <div class="buttons">
+                    <ul>
+                        <li class="list btn active" data-filter="all">All</li>
+                        <li class="list btn" data-filter="web">Web</li>
+                        <li class="list btn" data-filter="design">Design</li>
+                        <li class="list btn" data-filter="mobile">Mobile</li>
+
+                    </ul>
+                </div>
+                <div class="gallery">
+                    <div class="box"></div>
+                </div>
+            </div>
+            <div class="show-more-btn">
+                <button class="btn show-more"> show more</button>
+            </div>
+        </section>
+
+        <div id="imageModal" class="modal">
+            <span class="close">&times;</span>
+            <div class="modal-content">
+                <div class="popup-content">
+                    <div class="left">
+                        <div class="wrapper">
+                            <i id="left" class="fa-solid fa-angle-left"></i>
+                            <div class="carousel">
+                                <!-- Images will be added dynamically here -->
+                            </div>
+                            <i id="right" class="fa-solid fa-angle-right"></i>
+                        </div>
+                        <div class="dots">
+                            <!-- Dots will be added dynamically here -->
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="title">
+                            <h1>Title</h1>
+                            <p class="title-project"></p>
+                        </div>
+                        <div class="description">
+                            <h1>Description</h1>
+                            <p class="description-project"></p>
+                        </div>
+                        <div class="btns">
+                            <a href="#" class="google-play"><img
+                                    src="./images/popup/google btn.png"
+                                    alt="google play"></a>
+                            <a href="#" class="app-play"><img
+                                    src="./images/popup/app store btn.png"
+                                    alt="app store"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end portfolio section -->
+
         <!-- start our services section -->
         <section class="service" id="Services">
             <div class="container">
@@ -236,66 +299,30 @@
         </section>
         <!-- end our services section -->
 
-        <!-- start portfolio section -->
-        <section class="portfolio" id="Portfolio">
+        <!-- start feedback section -->
+        <section class="feedback" id="feed">
             <div class="container">
-                <h1 class="main-heading">Portfolio</h1>
-                <div class="buttons">
-                    <ul>
-                        <li class="list btn active" data-filter="all">All</li>
-                        <li class="list btn" data-filter="web">Web</li>
-                        <li class="list btn" data-filter="design">Design</li>
-                        <li class="list btn" data-filter="mobile">Mobile</li>
-
-                    </ul>
+                <h1 class="main-heading">feedback</h1>
+                <div class="slider">
+                    <div class="swiper tranding-slider">
+                        <div class="swiper-wrapper" id="sliderWrapper">
+                            <!-- Slides will be added here -->
+                        </div>
+                    </div>
+                    <div class="tranding-slider-control">
+                        <div class="swiper-button-prev slider-arrow">
+                            <ion-icon name="arrow-back-outline"></ion-icon>
+                        </div>
+                        <div class="swiper-button-next slider-arrow">
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
                 </div>
-                <div class="gallery">
-                    <div class="box"></div>
-                </div>
-            </div>
-            <div class="show-more-btn">
-                <button class="btn show-more"> show more</button>
+                
             </div>
         </section>
-
-        <div id="imageModal" class="modal">
-            <span class="close">&times;</span>
-            <div class="modal-content">
-                <div class="popup-content">
-                    <div class="left">
-                        <div class="wrapper">
-                            <i id="left" class="fa-solid fa-angle-left"></i>
-                            <div class="carousel">
-                                <!-- Images will be added dynamically here -->
-                            </div>
-                            <i id="right" class="fa-solid fa-angle-right"></i>
-                        </div>
-                        <div class="dots">
-                            <!-- Dots will be added dynamically here -->
-                        </div>
-                    </div>
-                    <div class="right">
-                        <div class="title">
-                            <h1>Title</h1>
-                            <p class="title-project"></p>
-                        </div>
-                        <div class="description">
-                            <h1>Description</h1>
-                            <p class="description-project"></p>
-                        </div>
-                        <div class="btns">
-                            <a href="#" class="google-play"><img
-                                    src="./images/popup/google btn.png"
-                                    alt="google play"></a>
-                            <a href="#" class="app-play"><img
-                                    src="./images/popup/app store btn.png"
-                                    alt="app store"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end portfolio section -->
+        <!-- end feedback section -->
 
         <!-- start find us section -->
         <section class="find" id="Find">
@@ -405,9 +432,18 @@
         </button>
 
         <!-- javaScript Link -->
+        <!-- feedback slider -->
+        <script type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+        <script src="js/feedback.js"></script>
         <script src="js/formValidation.js"></script>
         <script src="js/portfolio.js"></script>
+
         <script src="js/main.js"></script>
+
     </body>
 
 </html>
