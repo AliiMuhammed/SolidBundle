@@ -27,8 +27,8 @@ function openModal(itemId) {
         const imgElement = document.createElement("img");
         imgElement.src = screenshot.path;
         imgElement.alt = "img";
-        imgContainer.style.backgroundImage = `url(${data.data.background})`;
-         imgContainer.style.backgroundSize = "cover";
+        carousel.style.backgroundImage = `url(${data.data.background})`;
+        carousel.style.backgroundSize = "cover";
         imgContainer.appendChild(imgElement);
         carousel.appendChild(imgContainer);
       });
@@ -36,11 +36,6 @@ function openModal(itemId) {
       (firstImg = carousel.querySelectorAll("img")[0]),
         (arrowIcons = document.querySelectorAll(".wrapper i"));
 
-      let isDragStart = false,
-        isDragging = false,
-        prevPageX,
-        prevScrollLeft,
-        positionDiff;
 
       const showHideIcons = () => {
         let scrollWidth = carousel.scrollWidth - carousel.clientWidth;

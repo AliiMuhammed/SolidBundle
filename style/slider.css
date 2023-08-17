@@ -82,6 +82,11 @@
   -o-border-radius: 0.8rem;
 }
 
+.modal-content .right a .btn-icon {
+  width: 40px;
+  margin-right: 5px;
+}
+
 .modal-content .right a img {
   width: 75%;
 }
@@ -92,21 +97,24 @@
     padding: 1.5rem;
 
   }
+
   .modal-content .right h1 {
-    
+
     font-size: 1.3rem;
   }
+
   .modal-content .right p {
     font-size: 0.9rem;
   }
+
   .modal-content .right .title {
     margin-bottom: 0rem;
   }
-  
+
   .modal-content .right .description {
     margin-bottom: 0rem;
   }
-  
+
   .modal-content .right .btns {
     margin-top: 1rem;
   }
@@ -128,89 +136,102 @@
 
 @media only screen and (max-width: 767px) {
   .modal-content {
-      width: 90%;
+    width: 90%;
   }
 
   .modal-content .popup-content {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0;
-      width: 100%;
-     
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    width: 100%;
 
+
+  }
+
+  .modal-content .right a .btn-icon {
+    width: 35px;
   }
 }
 
-  /* Medium screens (768px - 991px) */
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-  
+/* Medium screens (768px - 991px) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
   .modal-content {
-      width: 75%;
+    width: 75%;
   }
-    .modal-content .popup-content {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0;
-      width: 100%;
+
+  .modal-content .popup-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    width: 100%;
   }
+
   .modal-content .right h1 {
-      
+
     font-size: 1.3rem;
   }
+
   .modal-content .right p {
     font-size: 1.1rem;
   }
+
   .modal-content .right .title {
     margin-bottom: 1rem;
   }
-  
+
   .modal-content .right .description {
     margin-bottom: 1rem;
   }
-  
+
   .modal-content .right .btns {
     margin-top: 0rem;
   }
+
   .modal-content .right a img {
     width: 60%;
   }
+
   .modal-content .right a {
     width: 50%;
   }
 
 
-  }
+}
 
 
 @media only screen and (min-width: 992px) and (max-width: 1400px) {
   .modal-content .popup-content {
     gap: 2rem;
     width: 100%;
-}
-.modal-content .right h1 {
-    
-  font-size: 1.3rem;
-}
-.modal-content .right .title {
-  margin-bottom: 2rem;
-}
+  }
 
-.modal-content .right .description {
-  margin-bottom: 2rem;
-}
+  .modal-content .right h1 {
 
-.modal-content .right .btns {
-  margin-top: 0rem;
-}
+    font-size: 1.3rem;
+  }
+
+  .modal-content .right .title {
+    margin-bottom: 2rem;
+  }
+
+  .modal-content .right .description {
+    margin-bottom: 2rem;
+  }
+
+  .modal-content .right .btns {
+    margin-top: 0rem;
+  }
 
 }
 
 .wrapper {
-    display: flex;
-    max-width: 100%;
-    position: relative;
-  }
-.wrapper i{
+  display: flex;
+  max-width: 100%;
+  position: relative;
+}
+
+.wrapper i {
   top: 50%;
   height: 44px;
   width: 44px;
@@ -231,7 +252,7 @@
 
 
 @media only screen and (max-width: 767px) {
-  .wrapper i{
+  .wrapper i {
     height: 30px;
     width: 30px;
     line-height: 30px;
@@ -241,20 +262,24 @@
 
 
 
-.wrapper i:active{
+.wrapper i:active {
   transform: translateY(-50%) scale(0.9);
 }
-.wrapper i:hover{
+
+.wrapper i:hover {
   background: #f2f2f2;
 }
-.wrapper i:first-child{
+
+.wrapper i:first-child {
   left: -22px;
   display: none;
 }
-.wrapper i:last-child{
+
+.wrapper i:last-child {
   right: -22px;
 }
-.wrapper .carousel{
+
+.wrapper .carousel {
   font-size: 0px;
   cursor: pointer;
   overflow: hidden;
@@ -262,63 +287,69 @@
   scroll-behavior: smooth;
   height: 100%;
 }
-.carousel.dragging{
+
+.carousel.dragging {
   cursor: grab;
   scroll-behavior: auto;
 }
-.carousel.dragging img{
+
+.carousel.dragging img {
   pointer-events: none;
 }
+
 .carousel img {
-    height: 100%;
-    max-width: 70%; 
-    object-fit: cover;
-    user-select: none;
-    display: block;
-    margin: 0 auto;
-  }
+  height: 100%;
+  max-width: 70%;
+  object-fit: cover;
+  user-select: none;
+  display: block;
+  margin: 0 auto;
+}
 
-  @media only screen and (max-width: 767px) {
-    .carousel img {
-      max-width: 40%; 
-    }
-  }
-  @media only screen and (min-width: 992px) and (max-width: 1400px) {
-    .carousel img {
-      max-width: 85%; 
-    }
-  }
-
-  /* Medium screens (768px - 991px) */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (max-width: 767px) {
   .carousel img {
-    max-width: 40%; 
+    max-width: 40%;
   }
 }
-.carousel_img {
-    display: inline-block;
-    height: 100%; 
-  }
 
-  .dots {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+@media only screen and (min-width: 992px) and (max-width: 1400px) {
+  .carousel img {
+    max-width: 85%;
+  }
+}
+
+/* Medium screens (768px - 991px) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .carousel img {
+    max-width: 40%;
+  }
+}
+
+.carousel_img {
+  display: inline-block;
+  height: 100%;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .dot {
-    width: 10px;
-    height: 10px;
-    background-color: #c5c5c5;
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  width: 10px;
+  height: 10px;
+  background-color: #c5c5c5;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .dot.active {
-    background-color: #343F4F;
+  background-color: #343F4F;
 }
+
 /*end popup*/
 
 
