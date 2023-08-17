@@ -285,7 +285,7 @@
   }
   @media only screen and (min-width: 992px) and (max-width: 1400px) {
     .carousel img {
-      max-width: 95%; 
+      max-width: 85%; 
     }
   }
 
