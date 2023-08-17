@@ -41,7 +41,7 @@
 
 
 .tranding-slider {
-width: 50%;
+  width: 100%;
   padding: 2rem 0;
   position: relative;
 }
@@ -52,6 +52,22 @@ width: 50%;
     }
 }
 
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+
+
+}
+
+@media only screen and (min-width: 1600px) {
+  .tranding-slider {
+    width: 66%;
+
+    }
+}
+@media only screen and (min-width: 992px) and (max-width:1599px){
+  .tranding-slider {
+    width: 99%;
+    }
+}
 
 .tranding-slide {
   width:400px !important;
@@ -69,16 +85,39 @@ width: 50%;
   -ms-border-radius: 1.5rem;
   -o-border-radius: 1.5rem;
 }
-
+@media only screen and (max-width: 767px) {
+  .tranding-slide {
+    width: 100% !important;
+    height: 500px !important;
+    padding: 2rem;
+  }
+}
+/* Medium screens (768px - 991px) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .tranding-slide {
+    width: 100% !important;
+    height: 700px !important;
+    padding: 2rem;
+  }
+}
 .tranding-slide .client-img {
   width: 50%;
-  padding: 1rem;
+  padding: 5px;
   border-radius: 50%;
-  border: 1px solid var(--main-hover-color);
+  border: 2px solid var(--main-hover-color);
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Medium screens (768px - 991px) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .tranding-slide .client-img {
+    width: 40%;
+  }
 }
 
 .tranding-slide .client-img img {
@@ -108,13 +147,15 @@ width: 50%;
   margin-bottom: 2rem;
 }
 
-@media (max-width:500px) {
-  .tranding-slide {
-    width:360px !important;
-    height: 500px !important;
+@media only screen and (max-width: 767px) {
+  .tranding-slide .client-content h2 {
+    font-size: 1.3rem;
+    margin: 1rem 0; 
   }
-
   
+  .tranding-slide .client-content span {
+    margin-bottom: 1.5rem;
+  }
 }
 
 
@@ -130,7 +171,7 @@ width: 50%;
 
 
 .rating ion-icon {
-  color: var(--main-hover-color);
+  color: #f9c00e;
 }
 
 .swiper-slide-shadow-left,
@@ -191,12 +232,21 @@ width: 50%;
 }
 @media only screen and (max-width: 767px) {
   .tranding-slider-control .slider-arrow {
-    
     width: 2.5rem;
     height: 2.5rem;
 
   }
 }
+
+/* Medium screens (768px - 991px) */
+@media only screen and (min-width: 992px) and (max-width: 1599px) {
+  .tranding-slider-control .slider-arrow {
+    width: 2.5rem;
+    height: 2.5rem;
+
+  }
+}
+
 .tranding-slider-control .slider-arrow ion-icon {
   font-size: 2rem;
   color:#fff;
